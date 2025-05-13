@@ -1,6 +1,13 @@
 
 # VibeHubX
 
+![License](https://img.shields.io/badge/license-OGI--VibeHubX-blueviolet)
+![Status](https://img.shields.io/badge/status-v0.1--alpha-yellow)
+![Framework](https://img.shields.io/badge/built%20with-Flask-ff69b4)
+![PayPal](https://img.shields.io/badge/integration-PayPal-00457C?logo=paypal)
+![GitHub](https://img.shields.io/badge/version-control-GitHub-181717?logo=github)
+![BuiltBy](https://img.shields.io/badge/built%20by-Overlord%20Grid,%20Inc.-purple)
+
 VibeHubX is a freelance platform connecting customers with "Vibe Coders" who share their aesthetic and workflow preferences. Customers pay upfront via PayPal, and gigs are claimed on a first-come-first-served basis by coders. The platform takes a 5% fee per transaction, with the remaining 95% paid to the coder upon completion. All work is delivered via GitHub repositories for transparency.
 
 ## Features
