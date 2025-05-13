@@ -1,0 +1,86 @@
+
+🧿 VibeHubX + Source Distribution License Agreement
+Issued by: Overlord Grid, Inc.
+Codename: VIBEX
+Version: Public Issue – 2025
+
+🔖 License Overview
+VibeHubX is an intellectual property of Overlord Grid, Inc. This agreement governs all rights and responsibilities for users who interact with, modify, or distribute the VibeHubX platform and its associated components.
+
+✅ Summary of Use
+✅ Free for personal, educational, nonprofit, and internal company use  
+✅ Commercial deployment allowed with royalty compliance  
+✅ Modifications, forks, and remixes encouraged  
+✅ Attribution required for all public and private versions  
+✅ Use of code = Agreement to terms
+
+🔑 Rights Granted
+You are granted:
+• Full non-commercial use for unlimited personal or internal development  
+• Rights to modify, extend, rebrand, and deploy custom forks  
+• Rights to use the VibeHubX core to power services, platforms, or SaaS models  
+• Rights to publish commercial variants with a valid royalty model
+
+You may:
+• Replace UI, branding, logic, themes, assets  
+• Host on your own servers  
+• Publish on GitHub or commercial storefronts  
+• Build your own networks, dev portals, or extensions on top of the platform
+
+💰 Commercial Use Royalty Clause
+If you generate revenue using VibeHubX or its derivatives, the following applies:
+
+• A 5% royalty is required on Net GAAP Profits  
+• “Profit” = (Gross Revenue – Operating Expenses) per GAAP  
+• Payments are due annually on January 1st  
+• Payment method: PayPal to overlordgridinc@gmail.com  
+• Optional notarized license receipt available with signed form below
+
+🚫 Restrictions
+You may not:
+• Remove or falsify attribution to Overlord Grid, Inc.  
+• Claim the base VibeHubX repository as your original creation  
+• Use the software to deploy deceptive, exploitative, or unethical systems  
+• Resell access to VibeHubX without modified functionality or added value  
+• Violate local, state, or international laws in distribution
+
+📢 Attribution Requirement
+All projects using VibeHubX must clearly display:
+
+“Powered by VibeHubX – a project of Overlord Grid, Inc.”
+
+This should appear in at least one of the following locations:
+• Website footer  
+• Application About screen  
+• CLI/console version string  
+• Deployment documentation
+
+✨ Spirit of the License
+VibeHubX is built for creators who vibe with freedom, automation, and aesthetic code.  
+If you succeed using this platform, build better tools for others. Give back, support the Grid, and share what you’ve learned.
+
+We don’t hunt infringers — we spotlight innovators.
+
+📜 Optional Licensing Signature Agreement
+To receive a notarized license grant from Overlord Grid, Inc., complete and email this signed section to overlordgridinc@gmail.com. You will receive a countersigned and optionally notarized PDF copy for your records.
+
+Licensing Declaration (Optional)
+I, the undersigned, accept the terms of the VibeHubX License Agreement and agree to pay applicable royalties as required.
+
+Licensee (Developer):        _____________________________  
+Project Name:                _____________________________  
+Email:                       _____________________________  
+Signature (Licensee):        _____________________________  
+Date:                        _____________________________  
+
+Authorized OGI Representative: __________________________  
+Date (OGI):                  _____________________________  
+
+Notary Public (if used):     _____________________________  
+Notary Seal / Signature:     _____________________________  
+
+📩 For licensing inquiries, commercial validation, or escrow options:  
+Email: overlordgridinc@gmail.com
+
+© 2025 Overlord Grid, Inc. All Rights Reserved.  
+“Together, we build the Grid.”

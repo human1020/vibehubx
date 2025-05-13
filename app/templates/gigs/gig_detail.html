@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ gig.title }}{% endblock %}
+{% block content %}
+    <h2>{{ gig.title }}</h2>
+    <p><strong>Description:</strong> {{ gig.description }}</p>
+    <p><strong>Budget:</strong> ${{ gig.budget }}</p>
+    <p><strong>GitHub Repo:</strong> <a href="{{ gig.github_repo }}" target="_blank">{{ gig.github_repo }}</a></p>
+    <p><strong>Expires At:</strong> {{ gig.expires_at }}</p>
+    {% if gig.coder_id %}
+        <p><strong>Status:</strong> Claimed</p>
+    {% elif current_user.is_authenticated and current_user.is_coder and gig.is_active %}
+        <form method="POST" action="{{ url_for('gigs.claim_gig', id=gig.id) }}">
+            <button type="submit" class="btn btn-success">Claim Gig</button>
+        </form>
+    {% else %}
+        <p><strong>Status:</strong> Available</p>
+    {% endif %}
+{% endblock %}

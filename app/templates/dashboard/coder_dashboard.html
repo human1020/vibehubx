@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Coder Dashboard{% endblock %}
+{% block content %}
+    <h2>Coder Dashboard</h2>
+
+    <h3>Claimed Gigs</h3>
+    {% if claimed_gigs %}
+        <ul class="list-group mb-4">
+            {% for gig in claimed_gigs %}
+                <li class="list-group-item">
+                    <h5>{{ gig.title }}</h5>
+                    <p>Budget: ${{ gig.budget }}</p>
+                    <form method="POST" action="{{ url_for('gigs.complete_gig', id=gig.id) }}" class="d-inline">
+                        <button type="submit" class="btn btn-success btn-sm">Mark as Completed</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You haven't claimed any gigs yet.</p>
+    {% endif %}
+
+    <h3>Completed Gigs</h3>
+    {% if completed_gigs %}
+        <ul class="list-group">
+            {% for gig in completed_gigs %}
+                <li class="list-group-item">
+                    <h5>{{ gig.title }}</h5>
+                    <p>Budget: ${{ gig.budget }}</p>
+                    <p>Completed: {{ gig.completed_at }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No completed gigs yet.</p>
+    {% endif %}
+{% endblock %}

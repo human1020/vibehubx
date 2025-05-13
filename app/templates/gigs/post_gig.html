@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Post a Gig{% endblock %}
+{% block content %}
+    <h2>Post a New Gig</h2>
+    <form method="POST" action="{{ url_for('gigs.post_gig') }}">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" class="form-control" id="title" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="budget" class="form-label">Budget ($)</label>
+            <input type="number" step="0.01" class="form-control" id="budget" name="budget" required>
+        </div>
+        <div class="mb-3">
+            <label for="github_repo" class="form-label">GitHub Repository URL</label>
+            <input type="url" class="form-control" id="github_repo" name="github_repo" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Post Gig</button>
+    </form>
+{% endblock %}
