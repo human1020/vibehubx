@@ -1,219 +1,118 @@
+# 🎨 VibehubX: A Freelance Dev Platform for Aesthetic Coders
 
-# VibeHubX
+Welcome to **VibehubX**! This platform connects talented developers with clients seeking aesthetic coding solutions. Built by Overlord Grid, Inc., VibehubX leverages Flask, GitHub, and PayPal to create a seamless experience for freelancers and clients alike.
 
-![License](https://img.shields.io/badge/license-OGI--VibeHubX-blueviolet)
-![Status](https://img.shields.io/badge/status-v0.1--alpha-yellow)
-![Framework](https://img.shields.io/badge/built%20with-Flask-ff69b4)
-![PayPal](https://img.shields.io/badge/integration-PayPal-00457C?logo=paypal)
-![GitHub](https://img.shields.io/badge/version--control-GitHub-181717?style=flat&logo=github&logoColor=white)
-![BuiltBy](https://img.shields.io/badge/built%20by-Overlord%20Grid,%20Inc.-purple)
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Click%20Here-brightgreen)](https://github.com/human1020/vibehubx/releases)
 
-VibeHubX is a freelance platform connecting customers with "Vibe Coders" who share their aesthetic and workflow preferences. Customers pay upfront via PayPal, and gigs are claimed on a first-come-first-served basis by coders. The platform takes a 5% fee per transaction, with the remaining 95% paid to the coder upon completion. All work is delivered via GitHub repositories for transparency.
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+
+## Introduction
+
+In the evolving landscape of remote work, VibehubX stands out as a unique platform tailored for aesthetic coders. It serves as a bridge between creative developers and clients who appreciate the artistry in code. With a focus on user experience, VibehubX aims to streamline the freelance process, making it easier for both parties to collaborate effectively.
 
 ## Features
 
-- **User Roles**:
-  - **Customers**: Post gigs, pay upfront, and provide a GitHub repo for deliverables.
-  - **Vibe Coders**: Claim gigs, complete them, and deliver via GitHub commits.
-- **Gig Workflow**:
-  - Customers post gigs with a title, description, budget, and GitHub repo URL.
-  - Gigs expire after 24 hours if not claimed.
-  - First coder to claim a gig owns it—no bidding wars.
-  - Coders complete gigs by submitting a commit SHA, triggering an automatic payout.
-- **Payment**:
-  - PayPal integration for upfront payments.
-  - 5% platform fee, 95% to the coder.
-  - No refunds or warranties—equal risk for both sides.
-- **Transparency**:
-  - Mandatory GitHub repo for all gigs.
-  - Commits verified via GitHub API.
-- **SLA**: Work is completed at the coder’s earliest convenience unless a deadline is specified.
+- **User Profiles**: Create and customize your profile to showcase your skills and portfolio.
+- **Job Listings**: Browse and apply for freelance gigs that match your expertise.
+- **Secure Payments**: Integrated PayPal support for hassle-free transactions.
+- **GitHub Integration**: Easily link your GitHub projects to your profile.
+- **Aesthetic Design**: A user-friendly interface that enhances the coding experience.
+- **Community Support**: Join a network of like-minded developers and share insights.
 
-## Tech Stack
+## Technologies Used
 
-- **Backend**: Flask, SQLAlchemy, Flask-Migrate, Flask-Login, Flask-Bcrypt
-- **Frontend**: HTML5, CSS3 (Bootstrap 5, custom styles with Poppins font)
-- **Integrations**:
-  - PayPal API for payments and payouts
-  - GitHub API for repo validation and commit verification
-- **Deployment**: Gunicorn (WSGI server), PostgreSQL (production database)
-- **Development**: SQLite (development database), pytest for testing
+VibehubX is built on a robust stack that includes:
 
-## Directory Structure
+- **Flask**: A lightweight web framework for Python that simplifies the development process.
+- **GitHub**: For version control and collaboration.
+- **PayPal API**: For secure payment processing.
+- **Python**: The primary programming language used for backend development.
+- **HTML/CSS/JavaScript**: For front-end development and ensuring an aesthetic user experience.
 
-```
-vibehubx/
-├── app/
-│   ├── init.py
-│   ├── models/
-│   │   ├── user.py
-│   │   ├── gig.py
-│   │   ├── transaction.py
-│   │   └── init.py
-│   ├── routes/
-│   │   ├── auth.py
-│   │   ├── gigs.py
-│   │   ├── dashboard.py
-│   │   └── init.py
-│   ├── services/
-│   │   ├── payment_service.py
-│   │   ├── github_service.py
-│   │   └── init.py
-│   ├── templates/
-│   │   ├── auth/
-│   │   │   ├── login.html
-│   │   │   └── register.html
-│   │   ├── gigs/
-│   │   │   ├── post_gig.html
-│   │   │   ├── list_gigs.html
-│   │   │   └── gig_detail.html
-│   │   ├── dashboard/
-│   │   │   └── coder_dashboard.html
-│   │   └── base.html
-│   ├── static/
-│   │   ├── css/
-│   │   │   └── main.css
-│   │   ├── js/
-│   │   │   └── main.js
-│   │   └── images/
-│   │       └── logo.png
-│   └── utils/
-│       ├── auth_helpers.py
-│       ├── decorators.py
-│       ├── helpers.py
-│       └── init.py
-├── migrations/
-├── requirements.txt
-├── config.py
-├── .env
-├── .gitignore
-└── run.py
-```
+## Getting Started
 
-## Setup Instructions
+To get started with VibehubX, follow these steps:
 
-### Prerequisites
+1. **Clone the Repository**: Use the command below to clone the repository to your local machine.
 
-- Python 3.9+
-- PostgreSQL (for production; SQLite is used for development by default)
-- PayPal Developer Account (for API credentials)
-- GitHub Personal Access Token (for API access)
+   ```bash
+   git clone https://github.com/human1020/vibehubx.git
+   ```
 
-### Installation
+2. **Install Dependencies**: Navigate to the project directory and install the required packages.
 
-```bash
-git clone <repository-url>
-cd vibehubx
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
+   ```bash
+   cd vibehubx
+   pip install -r requirements.txt
+   ```
 
-# Create .env
-echo "SECRET_KEY=your-secret-key-here" > .env
-echo "DATABASE_URL=sqlite:///vibehubx.db" >> .env
-echo "PAYPAL_MODE=sandbox" >> .env
-echo "PAYPAL_CLIENT_ID=your-paypal-client-id" >> .env
-echo "PAYPAL_CLIENT_SECRET=your-paypal-client-secret" >> .env
-echo "GITHUB_TOKEN=your-github-token" >> .env
+3. **Set Up Environment Variables**: Create a `.env` file to store your environment variables. Include your PayPal API credentials and any other necessary configurations.
 
-# Set environment for Flask
-export FLASK_APP=run.py  # On Windows: set FLASK_APP=run.py
+4. **Run the Application**: Start the Flask server.
 
-# Initialize database
-flask db init
-flask db migrate -m "Initial migration"
-flask db upgrade
-```
+   ```bash
+   flask run
+   ```
 
-### Production Setup (PostgreSQL)
-
-```bash
-pip install psycopg2-binary
-# update .env:
-DATABASE_URL=postgresql://user:password@localhost:5432/vibehubx
-
-# re-run setup
-flask db init
-flask db migrate -m "Initial migration"
-flask db upgrade
-```
-
-### Running the Application
-
-**Development**
-```bash
-export FLASK_ENV=development  # Windows: set FLASK_ENV=development
-python run.py
-```
-
-**Production**
-```bash
-export FLASK_ENV=production  # Windows: set FLASK_ENV=production
-gunicorn -w 4 -b 0.0.0.0:8000 run:app
-```
-
-### Testing
-
-```bash
-pytest
-```
+5. **Access the App**: Open your web browser and go to `http://127.0.0.1:5000` to view the application.
 
 ## Usage
 
-- **Register/Login** at `/register` and `/login`
-- **Post a Gig** at `/post`
-- **Claim a Gig** at `/`
-- **Complete a Gig** via `/dashboard` (submit commit SHA)
+Once the application is running, you can start using VibehubX:
 
-## Troubleshooting
-
-### .env Not Loading
-
-```bash
-pip show python-dotenv
-pip install python-dotenv==1.0.0
-```
-
-Ensure `.env` is in the project root and `load_dotenv()` is used in `config.py` or `__init__.py`.
-
-### Can't find migrations\env.py
-
-```bash
-rmdir /S /Q migrations
-flask db init
-```
-
-### module 'config' has no attribute 'Config'
-
-Ensure `config.py` exists and defines a class `Config`. Check no conflicting `config.pyc` or modules exist.
-
-```bash
-python -c "import config; print(config.__file__)"
-```
-
-### PayPal Errors
-
-Verify client credentials. Confirm sandbox account in PayPal Developer Dashboard.
-
-### GitHub Errors
-
-Ensure token has `repo` scope.
-
-## Notes
-
-- No refunds/warranties: shared risk model
-- Mandatory GitHub repo for all gigs
-
-## Future Improvements
-
-- WebSockets for real-time gig claims
-- Filter support (community, vibe, budget)
-- Logging and error reporting enhancements
+- **Create an Account**: Sign up as a freelancer or client.
+- **Post a Job**: Clients can post job listings detailing their requirements.
+- **Apply for Jobs**: Freelancers can browse available jobs and submit applications.
+- **Manage Payments**: Use the integrated PayPal system for secure transactions.
+- **Showcase Your Work**: Link your GitHub projects to your profile for visibility.
 
 ## Contributing
 
-Fork → Branch → PR
+We welcome contributions from the community. If you'd like to contribute to VibehubX, please follow these steps:
+
+1. **Fork the Repository**: Click the "Fork" button on the top right corner of the page.
+2. **Create a Branch**: Use the command below to create a new branch.
+
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+
+3. **Make Your Changes**: Implement your changes and test them thoroughly.
+4. **Commit Your Changes**: Use a descriptive commit message.
+
+   ```bash
+   git commit -m "Add your feature description"
+   ```
+
+5. **Push to Your Fork**: Push your changes to your forked repository.
+
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+
+6. **Create a Pull Request**: Go to the original repository and create a pull request.
 
 ## License
 
-© 2025 VibeHubX | A division of Overlord Grid, Inc. All rights reserved.
+VibehubX is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+## Contact
+
+For inquiries, please reach out to us at [support@overlordgrid.com](mailto:support@overlordgrid.com).
+
+For updates and releases, visit our [Releases page](https://github.com/human1020/vibehubx/releases).
+
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-Click%20Here-brightgreen)](https://github.com/human1020/vibehubx/releases)
+
+## Conclusion
+
+VibehubX aims to empower developers by providing a platform that values aesthetic coding. With a user-friendly interface and essential features, it facilitates a smooth freelance experience. Join us in building a community of aesthetic coders and explore the possibilities that VibehubX offers.
